@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>온종일 파트너 — 당신도 여러 사업의 사장님이 될 수 있습니다</title>
+<meta name="description" content="프랜차이즈·위탁판매·창업 무엇이든. 온종일 매니저 하나로 여러 사업을 관리하고 판매하는 총괄 파트너를 모집합니다. 창업 경험 없어도 시작할 수 있어요.">
+<meta name="theme-color" content="#16b87a">
+<meta property="og:title" content="온종일 파트너 모집 — 당신도 여러 사업의 사장님이 될 수 있습니다">
+<meta property="og:description" content="프랜차이즈·위탁판매·창업 무엇이든. 온종일 매니저로 한 곳에서 관리·판매하는 총괄 파트너 모집.">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
+<style>
+  :root{
+    --gold:#e0a93b; --gold2:#f2c25e;
+    --green:#16b87a; --green2:#38d39a;
+    --pink:#ec5c9c; --pink2:#ff80b8;
+    --blue:#4b7bf5;
+    --ink:#16161d; --ink2:#3a3a46; --muted:#6b6b7a;
+    --bg:#ffffff; --soft:#f6f8fb; --line:#eceef3; --card:#ffffff;
+    --grad:linear-gradient(100deg,var(--gold) 0%,var(--pink) 50%,var(--green) 100%);
+    --radius:20px; --max:1180px;
+    --shadow:0 30px 70px -28px rgba(30,30,60,.22);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Pretendard',-apple-system,BlinkMacSystemFont,sans-serif;color:var(--ink);
+    background:var(--bg);line-height:1.62;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 22px}
+  .grad{background:var(--grad);background-size:220% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:sh 6s linear infinite}
+  @keyframes sh{to{background-position:220% center}}
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+
+  /* NAV */
+  header.nav{position:fixed;inset:0 0 auto 0;z-index:50;backdrop-filter:saturate(180%) blur(14px);
+    background:rgba(255,255,255,.78);border-bottom:1px solid transparent;transition:.3s}
+  header.nav.s{border-bottom-color:var(--line);background:rgba(255,255,255,.92)}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;height:66px}
+  .logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:19px;letter-spacing:-.02em}
+  .logo .m{width:32px;height:32px;border-radius:10px;background:var(--grad);display:grid;place-items:center}
+  .logo .m svg{width:19px;height:19px}
+  .nav-cta{font-weight:800;font-size:14.5px;color:#fff;background:var(--grad);background-size:200% auto;
+    padding:11px 20px;border-radius:999px;animation:sh 5s linear infinite;box-shadow:0 10px 24px -10px var(--pink);transition:.2s}
+  .nav-cta:hover{transform:translateY(-2px)}
+  .nav-right{display:flex;align-items:center;gap:10px}
+  .theme-btn{width:42px;height:42px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--ink);display:grid;place-items:center;cursor:pointer;transition:.2s;flex:0 0 auto}
+  .theme-btn:hover{border-color:var(--gold);transform:translateY(-1px)}
+  .theme-btn svg{width:19px;height:19px}
+  .theme-btn .moon{display:none}
+  :root[data-theme="dark"] .theme-btn .sun{display:none}
+  :root[data-theme="dark"] .theme-btn .moon{display:block}
+
+  /* ===== DARK THEME ===== */
+  :root[data-theme="dark"]{
+    --ink:#f3f1fa; --ink2:#d7d3e8; --muted:#9d99b6;
+    --bg:#141121; --soft:#1d1930; --line:#2d2942; --card:#1d1930;
+  }
+  :root[data-theme="dark"] body{background:var(--bg)}
+  :root[data-theme="dark"] header.nav{background:rgba(20,17,33,.78)}
+  :root[data-theme="dark"] header.nav.s{background:rgba(20,17,33,.93)}
+  :root[data-theme="dark"] .mock,
+  :root[data-theme="dark"] .feat,
+  :root[data-theme="dark"] .step,
+  :root[data-theme="dark"] .stat,
+  :root[data-theme="dark"] .form-card,
+  :root[data-theme="dark"] .chip,
+  :root[data-theme="dark"] .badge,
+  :root[data-theme="dark"] .btn-ghost,
+  :root[data-theme="dark"] .float-tag{background:var(--card);border-color:var(--line)}
+  :root[data-theme="dark"] .mock-chart{background:#15121f}
+  :root[data-theme="dark"] .prob{background:#15121f}
+  :root[data-theme="dark"] .types{background:#100e1a}
+  :root[data-theme="dark"] .sol{background:linear-gradient(180deg,var(--bg),var(--soft))}
+  :root[data-theme="dark"] .feat.span2{background:linear-gradient(110deg,#231a10,#1d1930)}
+  :root[data-theme="dark"] .field input,
+  :root[data-theme="dark"] .field select,
+  :root[data-theme="dark"] .field textarea{background:#15121f;color:var(--ink)}
+  :root[data-theme="dark"] .reel{background:linear-gradient(155deg,#1b1226 0%,#241228 42%,#0f2018 100%)}
+  :root[data-theme="dark"] .reel .orb{mix-blend-mode:screen;opacity:.32}
+
+  /* HERO */
+  .hero{position:relative;padding:140px 0 80px;overflow:hidden}
+  .hero:before{content:"";position:absolute;inset:0;z-index:-1;
+    background:radial-gradient(680px 380px at 88% -4%,color-mix(in srgb,var(--pink) 20%,transparent),transparent 60%),
+      radial-gradient(640px 420px at -4% 10%,color-mix(in srgb,var(--green) 18%,transparent),transparent 58%),
+      radial-gradient(560px 340px at 50% 110%,color-mix(in srgb,var(--gold) 16%,transparent),transparent 60%)}
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+  .badge{display:inline-flex;align-items:center;gap:8px;font-size:13.5px;font-weight:800;color:var(--ink2);
+    background:#fff;border:1px solid var(--line);padding:8px 16px;border-radius:999px;box-shadow:0 8px 20px -12px rgba(0,0,0,.2)}
+  .badge .d{width:8px;height:8px;border-radius:50%;background:var(--grad)}
+  h1{font-size:clamp(36px,5.4vw,60px);line-height:1.08;letter-spacing:-.035em;font-weight:800;margin:22px 0 18px}
+  h1 .u{position:relative;white-space:nowrap}
+  h1 .u:after{content:"";position:absolute;left:-1%;right:-1%;bottom:7%;height:30%;background:var(--grad);opacity:.26;z-index:-1;border-radius:4px}
+  .lead{font-size:clamp(16px,2vw,20px);color:var(--ink2);max-width:560px;font-weight:500}
+  .lead b{color:var(--ink)}
+  .cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px;align-items:center}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-weight:800;font-size:17px;cursor:pointer;border:none;font-family:inherit;transition:.2s}
+  .btn-pri{color:#fff;background:var(--grad);background-size:220% auto;animation:sh 5s linear infinite;
+    padding:17px 30px;border-radius:999px;box-shadow:0 18px 38px -14px var(--pink)}
+  .btn-pri:hover{transform:translateY(-2px);filter:saturate(1.08)}
+  .btn-ghost{color:var(--ink);background:#fff;border:1px solid var(--line);padding:15px 22px;border-radius:999px;font-size:15.5px;font-weight:700}
+  .btn-ghost:hover{border-color:var(--gold);transform:translateY(-1px)}
+  .hero-trust{display:flex;flex-wrap:wrap;gap:18px;margin-top:26px;color:var(--muted);font-size:14px;font-weight:600}
+  .hero-trust span{display:inline-flex;align-items:center;gap:7px}
+  .hero-trust svg{width:17px;height:17px;color:var(--green)}
+
+  /* DASHBOARD MOCK */
+  .mock{background:#fff;border:1px solid var(--line);border-radius:24px;box-shadow:var(--shadow);
+    padding:18px;position:relative;animation:float 5s ease-in-out infinite}
+  @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+  .mock-bar{display:flex;align-items:center;gap:6px;padding:0 4px 14px}
+  .mock-bar i{width:10px;height:10px;border-radius:50%;display:block}
+  .mock-bar .t{margin-left:auto;font-size:12px;font-weight:700;color:var(--muted)}
+  .mock-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px}
+  .kpi{border-radius:14px;padding:14px;color:#fff}
+  .kpi .l{font-size:12px;font-weight:700;opacity:.92}
+  .kpi .v{font-size:22px;font-weight:800;letter-spacing:-.02em;margin-top:3px}
+  .kpi.g{background:linear-gradient(135deg,var(--green2),var(--green))}
+  .kpi.p{background:linear-gradient(135deg,var(--pink2),var(--pink))}
+  .kpi.o{background:linear-gradient(135deg,var(--gold2),var(--gold))}
+  .kpi.b{background:linear-gradient(135deg,#6f9bff,var(--blue))}
+  .mock-chart{background:var(--soft);border-radius:14px;padding:14px}
+  .mock-chart .h{display:flex;justify-content:space-between;font-size:12px;font-weight:700;color:var(--ink2);margin-bottom:10px}
+  .bars{display:flex;align-items:flex-end;gap:8px;height:78px}
+  .bars div{flex:1;border-radius:6px 6px 0 0;background:var(--grad);opacity:.85}
+  .float-tag{position:absolute;background:#fff;border:1px solid var(--line);border-radius:14px;padding:9px 13px;
+    font-size:12.5px;font-weight:700;box-shadow:0 14px 30px -14px rgba(0,0,0,.25);display:flex;align-items:center;gap:7px}
+  .float-tag.t1{top:-14px;left:-18px;animation:float 4s ease-in-out infinite}
+  .float-tag.t2{bottom:-16px;right:-14px;animation:float 4.6s ease-in-out infinite}
+  .float-tag .dot{width:8px;height:8px;border-radius:50%;background:var(--green)}
+
+  /* TYPES */
+  .types{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--soft);padding:26px 0;margin-top:64px}
+  .types-in{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:center}
+  .types b{font-size:13.5px;color:var(--muted);font-weight:700}
+  .chip{font-size:14px;font-weight:700;color:var(--ink2);background:#fff;border:1px solid var(--line);padding:9px 16px;border-radius:999px;transition:.2s}
+  .chip:hover{transform:translateY(-2px);border-color:var(--gold);color:var(--gold)}
+
+  /* SECTION */
+  section.block{padding:92px 0}
+  .eyebrow{font-weight:800;font-size:13.5px;letter-spacing:.05em;text-transform:uppercase}
+  .eyebrow.g{color:var(--green)}.eyebrow.p{color:var(--pink)}.eyebrow.o{color:var(--gold)}
+  .h2{font-size:clamp(27px,4vw,43px);line-height:1.18;letter-spacing:-.03em;font-weight:800;margin:12px 0 14px}
+  .sub{font-size:clamp(15.5px,1.9vw,18px);color:var(--muted);max-width:640px;font-weight:500}
+  .center{text-align:center;margin-left:auto;margin-right:auto}
+
+  /* PROBLEM */
+  .prob-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:44px}
+  .prob{background:var(--soft);border:1px solid var(--line);border-radius:var(--radius);padding:28px;transition:.25s}
+  .prob:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+  .prob .e{font-size:34px}
+  .prob h3{font-size:19px;font-weight:800;margin:12px 0 7px;letter-spacing:-.02em}
+  .prob p{color:var(--muted);font-size:15px;font-weight:500}
+
+  /* SOLUTION (온종일 매니저 자연 연결) */
+  .sol{background:linear-gradient(180deg,#fff, var(--soft))}
+  .feat-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:46px}
+  .feat{border:1px solid var(--line);border-radius:var(--radius);padding:30px;background:#fff;transition:.25s;position:relative;overflow:hidden}
+  .feat:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+  .feat .ic{width:52px;height:52px;border-radius:14px;display:grid;place-items:center;margin-bottom:16px}
+  .feat .ic svg{width:26px;height:26px;color:#fff}
+  .ic.g{background:linear-gradient(135deg,var(--green2),var(--green))}.ic.p{background:linear-gradient(135deg,var(--pink2),var(--pink))}
+  .ic.o{background:linear-gradient(135deg,var(--gold2),var(--gold))}.ic.b{background:linear-gradient(135deg,#6f9bff,var(--blue))}
+  .feat h3{font-size:20px;font-weight:800;letter-spacing:-.02em;margin-bottom:8px}
+  .feat p{color:var(--muted);font-size:15px;font-weight:500}
+  .feat.span2{grid-column:1/-1;display:flex;gap:26px;align-items:center;background:linear-gradient(110deg,#fff7ed,#fff)}
+  .feat.span2 .ic{flex:0 0 auto}
+
+  /* STEPS */
+  .how{background:var(--soft)}
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:46px}
+  .step{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:30px;transition:.25s}
+  .step:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+  .step .num{font-size:42px;font-weight:800;line-height:1;letter-spacing:-.04em}
+  .step:nth-child(1) .num{color:var(--gold)}.step:nth-child(2) .num{color:var(--pink)}.step:nth-child(3) .num{color:var(--green)}
+  .step h3{font-size:20px;font-weight:800;margin:14px 0 8px;letter-spacing:-.02em}
+  .step p{color:var(--muted);font-size:15px;font-weight:500}
+
+  /* BENEFITS / STATS */
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:46px}
+  .stat{text-align:center;padding:26px 14px;border-radius:var(--radius);background:#fff;border:1px solid var(--line)}
+  .stat .big{font-size:clamp(26px,3.4vw,38px);font-weight:800;letter-spacing:-.03em}
+  .stat .lab{color:var(--muted);font-weight:600;font-size:14px;margin-top:4px}
+
+  /* SIGNUP */
+  .signup{position:relative;overflow:hidden;padding:96px 0}
+  .signup:before{content:"";position:absolute;inset:0;z-index:-1;
+    background:radial-gradient(560px 300px at 85% 0%,color-mix(in srgb,var(--pink) 18%,transparent),transparent 60%),
+      radial-gradient(560px 320px at 6% 100%,color-mix(in srgb,var(--green) 16%,transparent),transparent 58%),var(--soft)}
+  .form-card{max-width:560px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:24px;padding:42px;box-shadow:var(--shadow)}
+  .form-card h2{font-size:clamp(25px,3.6vw,34px);font-weight:800;letter-spacing:-.03em;text-align:center;line-height:1.22}
+  .form-card .desc{text-align:center;color:var(--muted);font-weight:500;margin:11px 0 26px;font-size:15.5px}
+  .field{margin-bottom:15px}
+  .field label{display:block;font-size:13.5px;font-weight:700;margin-bottom:7px;color:var(--ink2)}
+  .field input,.field select,.field textarea{width:100%;font-family:inherit;font-size:16px;padding:14px 15px;border:1.5px solid var(--line);border-radius:12px;background:#fcfcfe;transition:.18s;color:var(--ink)}
+  .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--pink);background:#fff;box-shadow:0 0 0 4px color-mix(in srgb,var(--pink) 15%,transparent)}
+  .field textarea{resize:vertical;min-height:80px}
+  .row2{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+  .submit{width:100%;margin-top:8px;font-family:inherit;font-weight:800;font-size:17.5px;color:#fff;background:var(--grad);background-size:220% auto;animation:sh 5s linear infinite;border:none;padding:16px;border-radius:14px;cursor:pointer;transition:.2s;box-shadow:0 16px 30px -16px var(--pink)}
+  .submit:hover{transform:translateY(-2px)}
+  .form-note{text-align:center;font-size:12.5px;color:var(--muted);margin-top:13px}
+  .agree{display:flex;align-items:flex-start;gap:9px;margin-top:4px;font-size:13px;color:var(--muted)}
+  .agree input{width:17px;height:17px;margin-top:2px;accent-color:var(--pink);flex:0 0 auto}
+  .success{display:none;text-align:center;padding:22px 8px}
+  .success.show{display:block;animation:pop .5s cubic-bezier(.2,.8,.2,1)}
+  @keyframes pop{from{opacity:0;transform:scale(.94)}to{opacity:1;transform:none}}
+  .success .ck{width:70px;height:70px;border-radius:50%;margin:0 auto 16px;background:var(--grad);display:grid;place-items:center}
+  .success .ck svg{width:34px;height:34px;color:#fff}
+  .success h3{font-size:22px;font-weight:800;margin-bottom:8px}
+  .success p{color:var(--muted);font-weight:500}
+
+  /* FAQ */
+  .faq{max-width:760px;margin:38px auto 0}
+  .faq-item{border-bottom:1px solid var(--line)}
+  .faq-q{width:100%;text-align:left;background:none;border:none;cursor:pointer;font-family:inherit;font-size:17px;font-weight:700;color:var(--ink);padding:21px 0;display:flex;justify-content:space-between;align-items:center;gap:14px}
+  .faq-q .pm{flex:0 0 auto;width:24px;height:24px;color:var(--pink);transition:.3s;font-size:22px;line-height:1}
+  .faq-q[aria-expanded="true"] .pm{transform:rotate(45deg)}
+  .faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease}
+  .faq-a p{padding:0 0 21px;color:var(--muted);font-size:15.5px;font-weight:500}
+
+  /* FOOTER */
+  footer{background:#12121a;color:#cfcfdb;padding:54px 0 38px}
+  .foot-in{display:flex;justify-content:space-between;flex-wrap:wrap;gap:22px;align-items:flex-start}
+  .foot-in .logo{color:#fff}
+  .biz{margin-top:30px;padding-top:22px;border-top:1px solid rgba(255,255,255,.1);font-size:12.5px;color:#8a8a98;line-height:1.9}
+
+  /* FLOAT */
+  .float-cta{position:fixed;right:18px;bottom:18px;z-index:60}
+  .float-cta a{display:inline-flex;align-items:center;gap:8px;font-weight:800;font-size:15px;color:#fff;background:var(--grad);background-size:220% auto;animation:sh 5s linear infinite;padding:15px 22px;border-radius:999px;box-shadow:0 16px 34px -10px var(--pink)}
+
+  /* CINEMATIC 모션 인트로 (대문 감성) */
+  .reel{position:relative;width:100%;min-height:92vh;overflow:hidden;display:grid;place-items:center;text-align:center;
+    background:linear-gradient(155deg,#fff4e6 0%,#ffe9f1 42%,#e7faf0 100%);background-size:220% 220%;animation:dawn 18s ease-in-out infinite}
+  @keyframes dawn{0%,100%{background-position:0% 0%}50%{background-position:100% 100%}}
+  .reel .orb{position:absolute;border-radius:50%;filter:blur(64px);opacity:.5;mix-blend-mode:multiply;pointer-events:none}
+  .reel .o1{width:44vw;height:44vw;background:var(--gold);left:-8%;top:-10%;animation:drift 14s ease-in-out infinite}
+  .reel .o2{width:40vw;height:40vw;background:var(--pink);right:-10%;top:6%;animation:drift 17s ease-in-out infinite reverse}
+  .reel .o3{width:48vw;height:48vw;background:var(--green);left:24%;bottom:-22%;animation:drift 20s ease-in-out infinite}
+  @keyframes drift{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(6%,5%) scale(1.12)}}
+  .reel-stage{position:relative;z-index:2;width:100%;height:100%;min-height:92vh}
+  .rscene{position:absolute;inset:0;display:grid;place-content:center;gap:14px;padding:24px;opacity:0;will-change:opacity,transform}
+  .rscene .sm{font-size:clamp(19px,3.2vw,32px);font-weight:500;color:var(--ink2);letter-spacing:-.02em}
+  .rscene .lg{font-size:clamp(38px,7.6vw,90px);font-weight:800;letter-spacing:-.04em;line-height:1.06;color:var(--ink)}
+  .rscene .lg.gr{background:var(--grad);background-size:200% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:sh 6s linear infinite}
+  .rscene .logo-big{display:flex;align-items:center;justify-content:center;gap:16px;margin-bottom:8px}
+  .rscene .logo-big .m{width:clamp(54px,7vw,80px);height:clamp(54px,7vw,80px);border-radius:22%;background:var(--grad);display:grid;place-items:center}
+  .rscene .logo-big .m svg{width:55%;height:55%}
+  .rscene .logo-big b{font-size:clamp(30px,5vw,54px);font-weight:800;letter-spacing:-.03em}
+  .r1{animation:rc1 21s infinite}.r2{animation:rc2 21s infinite}.r3{animation:rc3 21s infinite}.r4{animation:rc4 21s infinite}.r5{animation:rc5 21s infinite}.r6{animation:rc6 21s infinite}
+  @keyframes rc1{0%{opacity:0;transform:translateY(22px)}3%{opacity:1;transform:none}14%{opacity:1}17%{opacity:0;transform:translateY(-18px)}100%{opacity:0}}
+  @keyframes rc2{0%,17%{opacity:0;transform:translateY(22px)}20%{opacity:1;transform:none}31%{opacity:1}34%{opacity:0;transform:translateY(-18px)}100%{opacity:0}}
+  @keyframes rc3{0%,34%{opacity:0;transform:translateY(22px)}37%{opacity:1;transform:none}48%{opacity:1}51%{opacity:0;transform:translateY(-18px)}100%{opacity:0}}
+  @keyframes rc4{0%,51%{opacity:0;transform:translateY(22px)}54%{opacity:1;transform:none}65%{opacity:1}68%{opacity:0;transform:translateY(-18px)}100%{opacity:0}}
+  @keyframes rc5{0%,68%{opacity:0;transform:scale(.92)}71%{opacity:1;transform:scale(1)}82%{opacity:1}85%{opacity:0;transform:scale(1.06)}100%{opacity:0}}
+  @keyframes rc6{0%,85%{opacity:0;transform:translateY(22px)}88%{opacity:1;transform:none}99%{opacity:1}100%{opacity:0}}
+  .reel-bar{position:absolute;left:0;bottom:0;height:4px;background:var(--grad);z-index:3;animation:rbar 21s linear infinite}
+  @keyframes rbar{0%{width:0}100%{width:100%}}
+  .reel-scroll{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);z-index:3;font-size:13px;font-weight:700;color:var(--muted);display:flex;flex-direction:column;align-items:center;gap:4px;animation:bob 2s ease-in-out infinite}
+  @keyframes bob{0%,100%{transform:translate(-50%,0)}50%{transform:translate(-50%,7px)}}
+  @media(prefers-reduced-motion:reduce){
+    .reel,.reel .orb,.reel-bar,.reel-scroll{animation:none}
+    .rscene{display:none}.r5{display:grid;position:relative;opacity:1;inset:auto}
+  }
+
+  @media(max-width:900px){
+    .hero-grid{grid-template-columns:1fr;gap:38px}
+    .mock{max-width:440px;margin:0 auto}
+    .prob-grid,.feat-grid,.steps{grid-template-columns:1fr}
+    .feat.span2{flex-direction:column;align-items:flex-start}
+    .stats{grid-template-columns:1fr 1fr}
+  }
+  @media(max-width:600px){
+    .hero{padding:80px 0 60px}
+    section.block{padding:64px 0}
+    .reel{min-height:80vh}
+    .reel-stage{min-height:80vh}
+    .btn-pri,.btn-ghost{width:100%}
+    .row2{grid-template-columns:1fr}
+    .form-card{padding:28px 20px}
+    .float-cta a span{display:none}
+    .float-cta a{padding:15px;border-radius:50%}
+  }
+  @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.mock,.float-tag{animation:none}}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav" id="nav">
+  <div class="wrap nav-in">
+    <a href="#top" class="logo">
+      <span class="m"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M34 56l8-8 7 6 13-14 M62 40h10v10" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      온종일 파트너
+    </a>
+    <div class="nav-right">
+      <button class="theme-btn" id="themeBtn" aria-label="다크/라이트 전환">
+        <svg class="sun" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M19.1 4.9l-1.8 1.8M6.7 17.3l-1.8 1.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <svg class="moon" viewBox="0 0 24 24" fill="none"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+      </button>
+      <a href="#signup" class="nav-cta">파트너 신청</a>
+    </div>
+  </div>
+</header>
+<span id="top"></span>
+
+<!-- 시네마틱 모션 인트로 (대문 감성) -->
+<section class="reel" aria-label="온종일 파트너 인트로 영상">
+  <div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div>
+  <div class="reel-stage">
+    <div class="rscene r1"><div class="lg">매일, 같은 출근길.</div></div>
+    <div class="rscene r2"><div class="sm">문득 이런 생각이 들죠</div><div class="lg">“내 사업, 하나쯤.”</div></div>
+    <div class="rscene r3"><div class="lg">작게 시작한 하나가</div></div>
+    <div class="rscene r4"><div class="lg">둘이 되고, 셋이 되고.</div></div>
+    <div class="rscene r5"><div class="sm">이제 당신은</div><div class="lg gr">여러 사업의 사장님</div></div>
+    <div class="rscene r6">
+      <div class="logo-big"><span class="m"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M34 56l8-8 7 6 13-14 M62 40h10v10" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></svg></span><b>온종일 파트너</b></div>
+      <div class="sm">당신의 하루를, 온종일 함께.</div>
+    </div>
+  </div>
+  <div class="reel-bar"></div>
+  <a class="reel-scroll" href="#after-reel" aria-label="아래로 스크롤">SCROLL<span style="font-size:17px">↓</span></a>
+</section>
+<span id="after-reel"></span>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="badge reveal"><span class="d"></span>창업 경험 0도 OK · 멀티 사업 파트너 모집</span>
+      <h1 class="reveal">당신도 <span class="u grad">여러 사업의<br>사장님</span>이 될 수 있습니다</h1>
+      <p class="lead reveal">프랜차이즈든, 위탁판매든, 무인매장이든 — <b>무엇이든 시작하고</b>
+        <b>온종일 매니저</b> 하나로 회원·매출·상품을 한 곳에서 관리하고 판매하세요.
+        혼자서도 여러 사업을 굴리는 진짜 사장이 됩니다.</p>
+      <div class="cta-row reveal">
+        <a href="#signup" class="btn btn-pri">파트너 신청하기
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="#how" class="btn btn-ghost">어떻게 시작하나요 ↓</a>
+      </div>
+      <div class="hero-trust reveal">
+        <span><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>업종 제한 없음</span>
+        <span><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>관리·판매 시스템 제공</span>
+        <span><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>1:1 시작 지원</span>
+      </div>
+    </div>
+
+    <!-- DASHBOARD MOCK -->
+    <div class="reveal">
+      <div class="mock">
+        <div class="float-tag t1"><span class="dot"></span>오늘 매출 +18%</div>
+        <div class="float-tag t2">🎉 신규 주문 12건</div>
+        <div class="mock-bar"><i style="background:#ff5f57"></i><i style="background:#febc2e"></i><i style="background:#28c840"></i><span class="t">온종일 매니저 · 통합 대시보드</span></div>
+        <div class="mock-row">
+          <div class="kpi g"><div class="l">이번 달 매출</div><div class="v">₩ 24,800,000</div></div>
+          <div class="kpi p"><div class="l">관리 사업장</div><div class="v">3곳</div></div>
+        </div>
+        <div class="mock-row">
+          <div class="kpi o"><div class="l">누적 회원</div><div class="v">1,284명</div></div>
+          <div class="kpi b"><div class="l">판매 상품</div><div class="v">156개</div></div>
+        </div>
+        <div class="mock-chart">
+          <div class="h"><span>주간 매출 추이</span><span class="grad">▲ 32%</span></div>
+          <div class="bars"><div style="height:40%"></div><div style="height:58%"></div><div style="height:48%"></div><div style="height:72%"></div><div style="height:64%"></div><div style="height:88%"></div><div style="height:100%"></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TYPES -->
+<div class="types">
+  <div class="wrap types-in">
+    <b>이런 사업, 뭐든 가능해요</b>
+    <span class="chip">프랜차이즈</span>
+    <span class="chip">위탁판매</span>
+    <span class="chip">무인매장</span>
+    <span class="chip">온라인 셀러</span>
+    <span class="chip">오프라인 매장</span>
+    <span class="chip">농수산물 유통</span>
+    <span class="chip">디지털 상품</span>
+  </div>
+</div>
+
+<!-- PROBLEM -->
+<section class="block">
+  <div class="wrap">
+    <div class="center" style="max-width:680px">
+      <div class="eyebrow p reveal">여러 사업을 하고 싶지만</div>
+      <h2 class="h2 reveal">하나도 벅찬데,<br>여러 개를 어떻게?</h2>
+      <p class="sub reveal center">대부분 여기서 멈춥니다. 그런데 도구만 있으면 이야기가 달라져요.</p>
+    </div>
+    <div class="prob-grid">
+      <div class="prob reveal"><div class="e">🤯</div><h3>관리가 흩어진다</h3><p>사업마다 장부·고객·재고가 따로. 뭐가 잘되는지 한눈에 안 보입니다.</p></div>
+      <div class="prob reveal"><div class="e">⏰</div><h3>시간이 없다</h3><p>하나 챙기다 보면 다른 사업은 방치. 혼자선 두 개도 버겁습니다.</p></div>
+      <div class="prob reveal"><div class="e">💸</div><h3>경험이 없다</h3><p>창업은 처음이라 뭘 어떻게 팔고 관리해야 할지 막막합니다.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SOLUTION : 온종일 매니저 자연 연결 -->
+<section class="block sol" id="manager">
+  <div class="wrap">
+    <div class="center" style="max-width:700px">
+      <div class="eyebrow g reveal">그래서 — 온종일 매니저</div>
+      <h2 class="h2 reveal">여러 사업을,<br><span class="grad">한 화면에서</span></h2>
+      <p class="sub reveal center">파트너가 되면 이 시스템을 그대로 받습니다. 관리도 판매도 여기 하나로 끝나요.</p>
+    </div>
+    <div class="feat-grid">
+      <div class="feat reveal">
+        <div class="ic g"><svg viewBox="0 0 24 24" fill="none"><path d="M3 3v18h18M7 15l4-4 3 3 5-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h3>여러 사업 통합 대시보드</h3><p>프랜차이즈·위탁·온라인까지 매출·회원·재고를 한 화면에서. 뭐가 돈이 되는지 숫자로 보여요.</p>
+      </div>
+      <div class="feat reveal">
+        <div class="ic p"><svg viewBox="0 0 24 24" fill="none"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM22 21v-2a4 4 0 0 0-3-3.87" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h3>회원·고객 관리</h3><p>단골을 자동으로 가려내고, 떠난 고객은 다시 부릅니다. 모든 사업의 고객이 한곳에.</p>
+      </div>
+      <div class="feat reveal">
+        <div class="ic o"><svg viewBox="0 0 24 24" fill="none"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4zM3 6h18M16 10a4 4 0 0 1-8 0" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h3>판매·주문·결제</h3><p>상품 등록부터 주문·결제까지. 만들어진 판매 채널로 바로 팔기 시작합니다.</p>
+      </div>
+      <div class="feat reveal">
+        <div class="ic b"><svg viewBox="0 0 24 24" fill="none"><path d="M13 2L3 14h7l-1 8 10-12h-7z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h3>성과 분석·코칭</h3><p>데이터에 기반한 다음 액션을 제안. 혼자가 아니라 함께 성과를 끌어올립니다.</p>
+      </div>
+      <div class="feat span2 reveal">
+        <div class="ic o"><svg viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div><h3>회사에 맞춰 전용 세팅</h3><p>당신이 다루는 사업 종류에 맞춰 화면·기능을 전용으로 세팅해 드려요. 그대로 따라 쓰는 게 아니라, 당신의 사업에 딱 맞게.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW -->
+<section class="block how" id="how">
+  <div class="wrap">
+    <div class="center" style="max-width:680px">
+      <div class="eyebrow o reveal">시작은 쉽게</div>
+      <h2 class="h2 reveal">3단계면 시작합니다</h2>
+      <p class="sub reveal center">창업 경험이 없어도 괜찮아요. 처음부터 같이 합니다.</p>
+    </div>
+    <div class="steps">
+      <div class="step reveal"><div class="num">01</div><h3>파트너 신청</h3><p>이름·연락처만 남기면 끝. 어떤 사업에 관심 있는지 함께 상담합니다.</p></div>
+      <div class="step reveal"><div class="num">02</div><h3>사업 세팅</h3><p>당신에게 맞는 사업을 골라, 온종일 매니저를 전용으로 세팅해 드려요.</p></div>
+      <div class="step reveal"><div class="num">03</div><h3>관리 & 판매</h3><p>이제 한 화면에서 관리하고 팔면 끝. 사업을 늘려갈수록 수익도 커집니다.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="block">
+  <div class="wrap">
+    <div class="center" style="max-width:680px">
+      <div class="eyebrow g reveal">왜 지금 시작해야 할까</div>
+      <h2 class="h2 reveal">혼자가 아니라,<br>시스템과 함께</h2>
+    </div>
+    <div class="stats">
+      <div class="stat reveal"><div class="big grad">전 업종</div><div class="lab">사업 종류 제한 없음</div></div>
+      <div class="stat reveal"><div class="big grad">올인원</div><div class="lab">관리+판매 한 시스템</div></div>
+      <div class="stat reveal"><div class="big grad">1:1</div><div class="lab">시작부터 함께 지원</div></div>
+      <div class="stat reveal"><div class="big grad">N개</div><div class="lab">여러 사업 동시 운영</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SIGNUP -->
+<section class="signup" id="signup">
+  <div class="wrap">
+    <div class="form-card reveal">
+      <form id="form">
+        <h2>지금 <span class="grad">파트너</span>로 시작하세요</h2>
+        <p class="desc">신청하면 담당자가 연락드려, 당신에게 맞는 사업과 시작 방법을 안내해 드려요.</p>
+        <div class="field"><label for="name">이름 *</label><input id="name" name="이름" type="text" placeholder="홍길동" required autocomplete="name"></div>
+        <div class="field"><label for="phone">연락처 *</label><input id="phone" name="연락처" type="tel" placeholder="010-1234-5678" required inputmode="numeric" autocomplete="tel"></div>
+        <div class="row2">
+          <div class="field"><label for="interest">관심 분야</label>
+            <select id="interest" name="관심분야">
+              <option value="">선택 (선택사항)</option>
+              <option>프랜차이즈</option><option>위탁판매</option><option>무인매장</option>
+              <option>온라인 셀러</option><option>오프라인 매장</option><option>아직 못 정함</option>
+            </select>
+          </div>
+          <div class="field"><label for="exp">창업 경험</label>
+            <select id="exp" name="창업경험"><option value="">선택 (선택사항)</option><option>처음이에요</option><option>조금 있어요</option><option>경험 많아요</option></select>
+          </div>
+        </div>
+        <div class="field"><label for="memo">하고 싶은 말 (선택)</label><textarea id="memo" name="문의내용" placeholder="관심 있는 사업이나 궁금한 점을 자유롭게 적어주세요."></textarea></div>
+        <label class="agree"><input type="checkbox" id="agree" required><span>개인정보 수집·이용에 동의합니다. (상담 안내 목적으로만 사용)</span></label>
+        <button type="submit" class="submit" id="submitBtn">파트너 신청하기</button>
+        <p class="form-note">버튼을 누르면 내용이 채워진 메일이 열려요. 보내기만 누르면 신청 완료!</p>
+      </form>
+      <div class="success" id="successBox">
+        <div class="ck"><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h3>신청 메일 창을 열었어요!</h3>
+        <p>내용이 자동으로 채워져 있어요.<br><b>'보내기'</b>만 누르면 접수됩니다. 감사합니다 🙏</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="block">
+  <div class="wrap">
+    <div class="center" style="max-width:680px">
+      <div class="eyebrow p reveal">자주 묻는 질문</div>
+      <h2 class="h2 reveal">궁금한 점이 있으신가요?</h2>
+    </div>
+    <div class="faq">
+      <div class="faq-item reveal"><button class="faq-q" aria-expanded="false">창업 경험이 전혀 없어도 되나요?<span class="pm">+</span></button>
+        <div class="faq-a"><p>네. 경험이 없어도 시작할 수 있도록 사업 선택부터 세팅, 운영까지 1:1로 함께합니다. 온종일 매니저가 관리와 판매를 대신 떠받쳐 주기 때문에 처음이어도 괜찮아요.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q" aria-expanded="false">어떤 사업을 할 수 있나요?<span class="pm">+</span></button>
+        <div class="faq-a"><p>프랜차이즈·위탁판매·무인매장·온라인 셀러·오프라인 매장 등 업종 제한이 없습니다. 관심 분야와 상황에 맞춰 적합한 사업을 함께 골라드립니다.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q" aria-expanded="false">여러 사업을 동시에 하면 관리가 안 되지 않나요?<span class="pm">+</span></button>
+        <div class="faq-a"><p>그래서 온종일 매니저가 있습니다. 여러 사업의 매출·회원·상품을 한 화면에서 관리하고, 무엇이 성과를 내는지 숫자로 보여드려요. 혼자서도 여러 사업을 굴릴 수 있는 이유입니다.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q" aria-expanded="false">비용이 드나요?<span class="pm">+</span></button>
+        <div class="faq-a"><p>사업 구성과 규모에 따라 달라집니다. 정확한 내용은 신청 후 상담에서 투명하게 안내해 드리니 부담 없이 신청해 주세요.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap foot-in">
+    <div>
+      <div class="logo"><span class="m"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M34 56l8-8 7 6 13-14 M62 40h10v10" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>온종일 파트너</div>
+      <p style="margin-top:13px;max-width:360px;font-size:14px;color:#9a9aa8;font-weight:500">무엇이든 시작하고, 한 곳에서 관리·판매하세요. 여러 사업의 사장이 되는 가장 쉬운 길.</p>
+    </div>
+    <a href="#signup" class="nav-cta" style="margin-top:4px">파트너 신청 →</a>
+  </div>
+  <div class="wrap"><div class="biz">
+    상호: 주식회사 유안에프앤비 &nbsp;|&nbsp; 대표: 오준영 &nbsp;|&nbsp; 사업자등록번호: 692-88-03600 &nbsp;|&nbsp; 통신판매업신고: 제2026-전남영광-0027호<br>
+    주소: 전라남도 영광군 법성면 굴비로1길 112-4 &nbsp;|&nbsp; 전화: 010-7432-3888 &nbsp;|&nbsp; © 2026 주식회사 유안에프앤비. All rights reserved.
+  </div></div>
+</footer>
+
+<div class="float-cta"><a href="#signup"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>파트너 신청</span></a></div>
+
+<script>
+  const PROJECT="온종일 파트너", MAIL_TO="tarry9653@daum.net";
+  const nav=document.getElementById('nav');
+  addEventListener('scroll',()=>nav.classList.toggle('s',scrollY>10));
+  // 테마 토글
+  const root=document.documentElement, tb=document.getElementById('themeBtn');
+  const saved=localStorage.getItem('onjongil_partner_theme');
+  if(saved) root.setAttribute('data-theme',saved);
+  else if(matchMedia('(prefers-color-scheme: dark)').matches) root.setAttribute('data-theme','dark');
+  tb.addEventListener('click',()=>{
+    const n=root.getAttribute('data-theme')==='dark'?'light':'dark';
+    root.setAttribute('data-theme',n); localStorage.setItem('onjongil_partner_theme',n);
+    document.querySelector('meta[name=theme-color]').setAttribute('content',n==='dark'?'#141121':'#16b87a');
+  });
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.12});
+  document.querySelectorAll('.reveal').forEach((el,i)=>{el.style.transitionDelay=(i%3)*70+'ms';io.observe(el);});
+  const phone=document.getElementById('phone');
+  phone.addEventListener('input',e=>{let v=e.target.value.replace(/\D/g,'').slice(0,11);if(v.length>3&&v.length<=7)v=v.slice(0,3)+'-'+v.slice(3);else if(v.length>7)v=v.slice(0,3)+'-'+v.slice(3,7)+'-'+v.slice(7);e.target.value=v;});
+  document.querySelectorAll('.faq-q').forEach(q=>q.addEventListener('click',()=>{const o=q.getAttribute('aria-expanded')==='true';q.setAttribute('aria-expanded',!o);const a=q.nextElementSibling;a.style.maxHeight=o?null:a.scrollHeight+'px';}));
+  const form=document.getElementById('form'), successBox=document.getElementById('successBox');
+  form.addEventListener('submit',e=>{
+    e.preventDefault();
+    const name=document.getElementById('name').value.trim(), ph=document.getElementById('phone').value.trim();
+    if(!name||!ph){alert('이름과 연락처를 입력해 주세요.');return;}
+    if(!document.getElementById('agree').checked){alert('개인정보 수집·이용에 동의해 주세요.');return;}
+    const interest=document.getElementById('interest').value||'(미선택)', exp=document.getElementById('exp').value||'(미선택)', memo=document.getElementById('memo').value.trim()||'(없음)';
+    const subject=`[${PROJECT}] 신청 - ${name}`;
+    const body=`────────────────────\n■ ${PROJECT} 신청\n────────────────────\n\n· 이름: ${name}\n· 연락처: ${ph}\n· 관심 분야: ${interest}\n· 창업 경험: ${exp}\n\n· 하고 싶은 말:\n${memo}\n\n────────────────────\n(온종일 파트너 모집 페이지에서 자동 작성됨)`;
+    window.location.href=`mailto:${MAIL_TO}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    setTimeout(()=>{form.style.display='none';successBox.classList.add('show');successBox.scrollIntoView({behavior:'smooth',block:'center'});},400);
+  });
+</script>
+</body>
+</html>
